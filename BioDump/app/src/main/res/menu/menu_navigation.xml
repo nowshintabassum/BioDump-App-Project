@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/tree"
+        android:title="Tree"
+        android:icon="@drawable/tree"/>
+    <item
+        android:id="@+id/alternate"
+        android:title="Alternate"
+        android:icon="@drawable/alternative"/>
+    <item
+        android:id="@+id/recycle"
+        android:title="Recycle"
+        android:icon="@drawable/recycle"
+        android:iconTint="@color/cardview_light_background"/>
+</menu>
