@@ -2,4 +2,7 @@
     <string name="app_name">BioDump</string>
     <string name="_181">181</string>
     <string name="aqi">AQI</string>
+    <string name="alternate">Alternate</string>
+    <string name="recycle">recycle</string>
+    <string name="tree">tree</string>
 </resources>

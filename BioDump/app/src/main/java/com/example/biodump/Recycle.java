@@ -6,24 +6,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ProgressBar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
-    ProgressBar progress_bar;
+public class Recycle extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        progress_bar=findViewById(R.id.progress_bar);
-        progress_bar.setProgress(30);
+        setContentView(R.layout.activity_recycle);
 
         //initialize and assign variable for the bottom nav
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         //set Home Selected
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.recycle);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -39,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
                                 ,tree.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.recycle:
+                    case R.id.home:
                         startActivity(new Intent(getApplicationContext()
-                                ,Recycle.class));
+                                ,MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.home:
+                    case R.id.recycle:
                         return true;
                 }
                 return false;
@@ -52,5 +49,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-
-
