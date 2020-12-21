@@ -5,4 +5,14 @@
     <string name="alternate">Alternate</string>
     <string name="recycle">recycle</string>
     <string name="tree">tree</string>
+    <string name="pollution_level">Pollution Level</string>
+    <string name="todo">TODO</string>
+    <string name="unhealthy">Unhealthy</string>
+    <string name="pollutants">Pollutants</string>
+    <string name="pm2_5">PM2.5</string>
+    <string name="air_quality">Air Quality</string>
+    <string name="_180">180</string>
+    <string name="temperature">Temperature</string>
+    <string name="_35c">35C</string>
+
 </resources>

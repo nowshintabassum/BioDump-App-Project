@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
 import android.widget.ProgressBar;
 
@@ -12,12 +13,29 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     ProgressBar progress_bar;
+    int i=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Progress Bar
+
         progress_bar=findViewById(R.id.progress_bar);
-        progress_bar.setProgress(30);
+        final Handler handler =new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(i<=90)
+                {
+                    progress_bar.setProgress(i);
+                    i++;
+                    handler.postDelayed(this,30);
+                }
+                else{
+                    handler.removeCallbacks(this);
+                }
+            }
+        },30);
 
         //initialize and assign variable for the bottom nav
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);

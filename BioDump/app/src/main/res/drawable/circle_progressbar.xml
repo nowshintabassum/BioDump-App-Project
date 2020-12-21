@@ -5,9 +5,6 @@
         android:shape="ring"
         android:thicknessRatio="56"
         android:useLevel="false">
-        <solid android:color="#c4fb6d"
-
-            />
 
     </shape>
 </item>
@@ -20,7 +17,11 @@
             android:shape="ring"
             android:thicknessRatio="56"
             android:useLevel="true">
-            <solid android:color="#649d66" />
+            <gradient
+                android:type="sweep"
+                android:endColor="#fa1616"
+                android:centerColor="#fff76a"
+                android:startColor="#61b15a"/>
 
         </shape>
         </rotate>
