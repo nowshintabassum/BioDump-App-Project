@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".tree"></activity>
+        <activity android:name=".Homepg"></activity>
+        <activity android:name=".MainMenu" />
+        <activity android:name=".tree" />
         <activity android:name=".Recycle" />
         <activity android:name=".Alternate" />
         <activity android:name=".MainActivity">
