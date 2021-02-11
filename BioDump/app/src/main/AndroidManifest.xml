@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChooseOne"></activity>
+        <activity android:name=".CityRegistration"></activity>
+        <activity android:name=".CityLoginphone" />
+        <activity android:name=".CityLogin" />
+        <activity android:name=".CitizenRegistration" />
+        <activity android:name=".Citizenloginphone" />
+        <activity android:name=".Citizenlogin" />
+        <activity android:name=".ChooseOne" />
         <activity android:name=".Homepg" />
         <activity android:name=".MainMenu" />
         <activity android:name=".tree" />
