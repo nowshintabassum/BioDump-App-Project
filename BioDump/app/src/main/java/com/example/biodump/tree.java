@@ -33,7 +33,7 @@ public class tree extends AppCompatActivity {
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()
-                                ,MainActivity.class));
+                                ,Homepg.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.recycle:
