@@ -32,7 +32,7 @@ public class ChooseOne extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(type.equals("Email")){
-                    Intent citizenloginemail  = new Intent(ChooseOne.this,Citizenlogin.class);
+                    Intent citizenloginemail  = new Intent(ChooseOne.this,Homepg.class);
                     startActivity(citizenloginemail);
                     finish();
                 }
@@ -53,7 +53,7 @@ public class ChooseOne extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(type.equals("Email")){
-                    Intent Cityloginemail  = new Intent(ChooseOne.this,CityLogin.class);
+                    Intent Cityloginemail  = new Intent(ChooseOne.this,Homepg.class);
                     startActivity(Cityloginemail);
                     finish();
                 }

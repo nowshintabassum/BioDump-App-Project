@@ -1,240 +1,523 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.amar.library.ui.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg3"
-    android:scrollbars="vertical"
-    tools:context=".Homepg"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg1"
+    android:fillViewport="true"
+    app:stickyFooter="@id/bottom_navigation">
 
 
-    >
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="20sp"
-        app:layout_constraintHeight_percent=".4"
-        android:indeterminateOnly="false"
-        android:progressDrawable="@drawable/circle_progressbar"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.0"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:progress="90"
-        />
-
-    <TextView
-        android:id="@+id/AQI_value"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_181"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        android:textColor="#58b368"
-        app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/progress_bar"
-        app:layout_constraintTop_toTopOf="@+id/progress_bar" />
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="350dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent=".9"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="350dp">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        android:background="@drawable/bg1">
 
 
-            android:layout_height="0dp"
-            android:background="@drawable/bg1"
-            app:cardCornerRadius="30dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="415dp"
+            android:layout_height="317dp"
+            android:layout_marginTop="16dp"
+
+            android:indeterminateOnly="false"
+            android:paddingTop="50sp"
+            android:paddingBottom="50sp"
+            android:progressDrawable="@drawable/circle_progressbar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintHeight_percent=".4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:progress="90" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="2679dp"
-                android:background="@drawable/bg1"
+        <TextView
+            android:id="@+id/AQI_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="#58b368"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/progress_bar"
+            app:layout_constraintTop_toTopOf="@+id/progress_bar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25sp"
+            android:background="#85181639"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="30dp"
+                android:layout_height="65dp"
 
 
-                >
+                android:contentDescription="@string/todo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_pollution_level" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="15dp"
 
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="30dp"
-                    android:layout_height="65dp"
+                android:text="@string/pollution_level"
+                android:textAlignment="center"
+                android:textColor="#C3C1C1"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/iv1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Pollution Level" />
+
+            <TextView
+
+                android:id="@+id/pollution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/unhealthy"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Unhealthy" />
 
 
-                    android:layout_marginTop="0dp"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/ic_pollution_level" />
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="30dp"
+                android:layout_height="65dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv1"
+                app:srcCompat="@drawable/ic_co2" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
 
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="12dp"
-                    android:text="@string/pollution_level"
-                    android:textAlignment="center"
-                    android:textColor="#C3C1C1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
 
 
-                    android:textSize="20sp"
-                    tools:text="Pollution Level" />
+                android:layout_marginTop="45dp"
+                android:text="@string/pollutants"
+                android:textAlignment="center"
+                android:textColor="#C3C1C1"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/iv2"
+                app:layout_constraintTop_toBottomOf="@+id/tv1"
+                tools:text="Pollutants" />
 
-                <TextView
+            <TextView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="240dp"
-                    android:layout_marginTop="12dp"
-                    android:text="@string/unhealthy"
-                    android:textAlignment="center"
+                android:id="@+id/pollutants"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/pm2_5"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.575"
+                app:layout_constraintStart_toEndOf="@+id/tv2"
+                app:layout_constraintTop_toBottomOf="@+id/pollution"
+                tools:text="PM2.5" />
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="30dp"
+                android:layout_height="65dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv2"
+                app:srcCompat="@drawable/ic_air_quality" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+
+
+                android:layout_marginTop="35dp"
+                android:text="@string/air_quality"
+                android:textAlignment="center"
+                android:textColor="#C3C1C1"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/iv3"
+                app:layout_constraintTop_toBottomOf="@+id/tv2"
+                tools:text="Air Quality" />
+
+
+            <TextView
+
+                android:id="@+id/AQ"
+                android:layout_width="wrap_content"
+
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/_180"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv3"
+                app:layout_constraintTop_toBottomOf="@+id/pollutants"
+                tools:text="180" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="35dp"
+                android:text="@string/temperature"
+                android:textAlignment="center"
+                android:textColor="#C3C1C1"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/iv4"
+                app:layout_constraintTop_toBottomOf="@+id/tv3"
+                tools:text="Temperature" />
+
+            <TextView
+                android:id="@+id/temp"
+
+                android:layout_width="34dp"
+                android:layout_height="27dp"
+
+                android:layout_marginTop="34dp"
+                android:text="@string/_35c"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.436"
+                app:layout_constraintStart_toEndOf="@+id/tv4"
+                app:layout_constraintTop_toBottomOf="@+id/AQ"
+                tools:text="35C" />
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="30dp"
+                android:layout_height="65dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv3"
+                app:srcCompat="@drawable/ic_temperature" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25sp"
+            android:background="@drawable/advices"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+
+
+                android:layout_marginTop="10dp"
+                android:background="#449F3A"
+                android:contentDescription="@string/todo"
+                app:layout_constraintEnd_toStartOf="@+id/tv5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/health" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="15dp"
+
+
+                android:layout_marginEnd="22dp"
+                android:text="@string/pollution_level"
+                android:textAlignment="center"
+                android:textColor="#C3C1C1"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv5"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Wear Mask Outdoors" />
+
+
+            <ImageView
+                android:id="@+id/iv6"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="45dp"
+                android:background="#449F3A"
+                android:contentDescription="@string/todo"
+                app:layout_constraintEnd_toStartOf="@+id/tv6"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv5"
+                app:srcCompat="@drawable/virus" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+
+
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="22dp"
+                android:text="@string/pollutants"
+                android:textAlignment="center"
+                android:textColor="#C3C1C1"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv6"
+                app:layout_constraintTop_toBottomOf="@+id/tv5"
+                tools:text="Close Windows" />
+
+
+            <ImageView
+                android:id="@+id/iv7"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="45dp"
+                android:background="#449F3A"
+                android:contentDescription="@string/todo"
+
+                app:layout_constraintEnd_toStartOf="@+id/tv7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv6"
+                app:srcCompat="@drawable/jogging" />
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+
+
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="22dp"
+                android:text="@string/air_quality"
+                android:textAlignment="center"
+                android:textColor="#C3C1C1"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv7"
+                app:layout_constraintTop_toBottomOf="@+id/tv6"
+                tools:text="Run Air purifier" />
+
+
+            <!--   <TextView
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="22dp"
+                android:text="@string/temperature"
+                android:textAlignment="center"
+                android:textColor="#C3C1C1"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv8"
+                app:layout_constraintTop_toBottomOf="@+id/tv7"
+                tools:text="Temperature" />
+
+
+            <ImageView
+                android:id="@+id/iv8"
+                android:layout_width="30dp"
+                android:layout_height="65dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv7"
+                app:srcCompat="@drawable/ic_temperature" /> -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <HorizontalScrollView
+
+            android:id="@+id/HSV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="15dp"
+            android:paddingStart="15sp"
+            android:paddingEnd="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <!--  <ImageButton
+                      android:layout_width="150dp"
+                      android:layout_height="150dp"
+                      android:src="@drawable/food"
+                      android:text ="Food"
+                      android:background="@drawable/foodbutton"
+                      /> -->
+
+                <Button
+                    android:id="@+id/FoodBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15sp"
+
+
+                    android:layout_marginTop="15sp"
+                    android:layout_marginEnd="15sp"
+                    android:background="@drawable/food"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/food"
+                    android:textColor="#DCC3C3"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintCircleRadius="3dp"
+                    app:layout_constraintEnd_toStartOf="@id/TreeBtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/TreeBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginEnd="15sp"
+                    android:background="@drawable/trees"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/trees"
+                    android:textColor="#DCC3C3"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toStartOf="@id/GrocBtn"
+                    app:layout_constraintStart_toEndOf="@+id/FoodBtn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/GrocBtn"
+                    android:layout_width="155dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginEnd="15sp"
+                    android:background="@drawable/groceries"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/groceries"
+                    android:textColor="#FFFDFD"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/VegBtn"
+                    app:layout_constraintStart_toEndOf="@+id/TreeBtn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/VegBtn"
+                    android:layout_width="155dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginEnd="30sp"
+                    android:background="@drawable/vegetable"
+
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/vegetables"
                     android:textColor="#FFFFFF"
-                    android:textSize="19sp"
-                    tools:text="Unhealthy" />
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/GrocBtn"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="65dp"
-                    android:layout_marginTop="60dp"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/ic_co2" />
+        </HorizontalScrollView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="176dp"
+            android:text="@string/uk_aqi"
+            android:textColor="#F6F2F2"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+            app:layout_constraintHorizontal_bias="0.114"
+            app:layout_constraintStart_toEndOf="@+id/AQI_value"
+            app:layout_constraintTop_toTopOf="@+id/progress_bar" />
 
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="80dp"
-                    android:text="@string/pollutants"
-                    android:textAlignment="center"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemBackground="@color/colorBlueAsh"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:layout_constraintTop_toBottomOf="@id/HSV"
+            app:menu="@menu/menu_navigation"
+            tools:layout_editor_absoluteX="0dp" />
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="264dp"
+            android:layout_height="674dp"
+            android:layout_marginBottom="148dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="@+id/progress_bar"
+            app:srcCompat="@drawable/env_circle" />
 
-                    android:textColor="#C3C1C1"
-                    android:textSize="20sp"
-                    tools:text="Pollutants" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="245dp"
-                    android:layout_marginTop="75dp"
-
-                    android:text="@string/pm2_5"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    tools:text="PM2.5" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="65dp"
-                    android:layout_marginTop="120dp"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/ic_air_quality" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="140dp"
-                    android:text="@string/air_quality"
-                    android:textAlignment="center"
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-                    android:textColor="#C3C1C1"
-                    android:textSize="20sp"
-                    tools:text="Air Quality" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="245dp"
-                    android:layout_marginTop="140dp"
-
-
-                    android:text="@string/_180"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    tools:text="180" />
-
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="65dp"
-                    android:layout_marginTop="175dp"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/ic_temperature" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="195dp"
-
-                    android:text="@string/temperature"
-
-
-                    android:textAlignment="center"
-                    android:textColor="#C3C1C1"
-                    android:textSize="20sp"
-                    tools:text="Temperature" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="245dp"
-                    android:layout_marginTop="195dp"
-
-                    android:text="@string/_35c"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    tools:text="35C" />
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="175dp"
-                    android:layout_marginTop="300dp"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/advices2" />
-
-
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-    </ScrollView>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:itemBackground="@color/colorBlueAsh"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/menu_navigation"
-        tools:layout_editor_absoluteX="0dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</com.amar.library.ui.StickyScrollView>
 
