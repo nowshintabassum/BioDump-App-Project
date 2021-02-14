@@ -53,7 +53,7 @@ public class ChooseOne extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(type.equals("Email")){
-                    Intent Cityloginemail  = new Intent(ChooseOne.this,Homepg.class);
+                    Intent Cityloginemail  = new Intent(ChooseOne.this,CityLogin.class);
                     startActivity(Cityloginemail);
                     finish();
                 }
