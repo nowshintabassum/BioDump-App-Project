@@ -51,8 +51,9 @@
             android:layout_marginLeft="25sp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="25sp"
-            android:background="#85181639"
+            android:background="@drawable/shape"
             android:paddingTop="25sp"
+            android:paddingLeft="10dp"
             android:paddingBottom="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -388,7 +389,8 @@
             android:paddingEnd="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+            android:paddingBottom="30dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
@@ -410,7 +412,7 @@
 
                     android:layout_marginTop="15sp"
                     android:layout_marginEnd="15sp"
-                    android:background="@drawable/food"
+                    android:background="@drawable/food2"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/food"
                     android:textColor="#DCC3C3"
@@ -428,7 +430,7 @@
                     android:layout_marginStart="15sp"
                     android:layout_marginTop="15sp"
                     android:layout_marginEnd="15sp"
-                    android:background="@drawable/trees"
+                    android:background="@drawable/trees2"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/trees"
                     android:textColor="#DCC3C3"
@@ -461,7 +463,7 @@
                     android:layout_marginStart="15sp"
                     android:layout_marginTop="15sp"
                     android:layout_marginEnd="30sp"
-                    android:background="@drawable/vegetable"
+                    android:background="@drawable/vegetables2"
 
                     android:fontFamily="sans-serif-black"
                     android:text="@string/vegetables"
