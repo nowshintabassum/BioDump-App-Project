@@ -16,8 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg1"
-    tools:context=".Alternate"
-       >
+        tools:context=".Alternate"
+        >
 
 
         <ImageView
@@ -156,31 +156,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.amar.library.ui.StickyScrollView>
 
- <!--   <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/folder"
-        android:layout_width="wrap_content"
 
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/design_default_color_primary"
-        android:elevation="6dp"
-        android:src="@drawable/ic_folder"
-        app:fabSize="auto"
-        app:layout_anchor="@id/tvf"
-        app:layout_anchorGravity="bottom|right" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/camera"
-        android:layout_width="wrap_content"
-
-
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/design_default_color_primary"
-        android:elevation="6dp"
-        android:src="@drawable/ic_camera"
-        app:fabSize="auto"
-        app:layout_anchor="@id/tvc"
-        app:layout_anchorGravity="bottom|right"/>-->

@@ -68,7 +68,7 @@ public class Alternate extends AppCompatActivity {
         spinner = findViewById(R.id.spinner);
         alt = findViewById(R.id.alt_btn);
         alt_text = findViewById(R.id.alt_text);
-           //intialize DB
+        //intialize DB
         dbref = FirebaseDatabase.getInstance().getReference("Alternatives");
         psuedoref = FirebaseDatabase.getInstance().getReference("Pseudo");
 
@@ -87,7 +87,7 @@ public class Alternate extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 flag=0;
                 objtv.setText("");
-              state=  spinner.getSelectedItem().toString();
+                state=  spinner.getSelectedItem().toString();
                 DatabaseReference altref = dbref.child(state);
                 ValueEventListener event = new ValueEventListener() {
                     @Override
@@ -114,7 +114,7 @@ public class Alternate extends AppCompatActivity {
 
         //Request for camera permission
         if(ContextCompat.checkSelfPermission(Alternate.this, Manifest.permission.CAMERA)
-        != PackageManager.PERMISSION_GRANTED)
+                != PackageManager.PERMISSION_GRANTED)
         {
             ActivityCompat.requestPermissions(Alternate.this,new String[]{
                     Manifest.permission.CAMERA
@@ -148,8 +148,8 @@ public class Alternate extends AppCompatActivity {
         alt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  String state = spinner.getSelectedItem().toString();
-               // String a = "Aerosol";
+                //  String state = spinner.getSelectedItem().toString();
+                // String a = "Aerosol";
 
                 if(flag==0) {
 
@@ -235,15 +235,15 @@ public class Alternate extends AppCompatActivity {
             try {
                 image = FirebaseVisionImage.fromFilePath(getApplicationContext(), imagedata);
                 FirebaseVisionImageLabeler labeler = FirebaseVision.getInstance()
-                      .getOnDeviceImageLabeler();
+                        .getOnDeviceImageLabeler();
 
-           //     Or, to set the minimum confidence required:
-        // FirebaseVisionCloudImageLabelerOptions options =
-        //        new FirebaseVisionCloudImageLabelerOptions.Builder()
-          //           .setConfidenceThreshold(0.7f)
-          //                       .build();
-          //   FirebaseVisionImageLabeler labeler = FirebaseVision.getInstance()
-          //                   .getCloudImageLabeler();
+                //     Or, to set the minimum confidence required:
+                // FirebaseVisionCloudImageLabelerOptions options =
+                //        new FirebaseVisionCloudImageLabelerOptions.Builder()
+                //           .setConfidenceThreshold(0.7f)
+                //                       .build();
+                //   FirebaseVisionImageLabeler labeler = FirebaseVision.getInstance()
+                //                   .getCloudImageLabeler();
 
 
                 labeler.processImage(image)
@@ -263,7 +263,7 @@ public class Alternate extends AppCompatActivity {
                                     if(confidence>con)
                                     {
 
-                                      //  objtv.setText(imgtext);
+                                        //  objtv.setText(imgtext);
                                         con= confidence;
                                         state=imgtext;
 
@@ -321,7 +321,7 @@ public class Alternate extends AppCompatActivity {
                                 if(confidence>con)
                                 {
 
-                                  //  objtv.setText(imgtext);
+                                    //  objtv.setText(imgtext);
                                     con= confidence;
                                     state=imgtext;
 
