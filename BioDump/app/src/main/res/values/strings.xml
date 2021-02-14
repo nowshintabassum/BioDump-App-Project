@@ -19,5 +19,7 @@
     <string name="trees">Trees</string>
     <string name="groceries">Groceries</string>
     <string name="vegetables">Vegetables</string>
+    <string name="object_in_the_picture">Object in the picture</string>
+    <string name="alternative">Alternative</string>
 
 </resources>
