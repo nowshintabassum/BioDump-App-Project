@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +31,7 @@ public class Homepg extends AppCompatActivity {
 
     int pg;
     double Lattitude,Longitude;
+    Button food,veg,tree,groc;
 
 
 
@@ -49,6 +52,10 @@ public class Homepg extends AppCompatActivity {
         advice1 =findViewById(R.id.tv5);
         advice2 =findViewById(R.id.tv6);
         advice3 =findViewById(R.id.tv7);
+        food = findViewById(R.id.FoodBtn);
+        veg = findViewById(R.id.VegBtn);
+        groc = findViewById(R.id.GrocBtn);
+        tree = findViewById(R.id.TreeBtn);
 
         getWeather();
         //Progress Bar
@@ -69,6 +76,34 @@ public class Homepg extends AppCompatActivity {
                 }
             }
         },30);
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepg.this, Recycle.class);
+                startActivity(intent);
+            }
+        });
+        tree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepg.this, Recycle.class);
+                startActivity(intent);
+            }
+        });
+        groc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepg.this, Recycle.class);
+                startActivity(intent);
+            }
+        });
+        veg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepg.this, Recycle.class);
+                startActivity(intent);
+            }
+        });
 
 
 
