@@ -1,33 +1,399 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.amar.library.ui.StickyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/bg3"
+    app:stickyFooter="@id/bottom_navigation">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Recycle"
     android:background="@drawable/bg3">
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         app:itemBackground="@color/colorBlueAsh"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/call5"
         app:menu="@menu/menu_navigation"
         tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/recycle"
-        android:layout_width="126dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="256dp"
-        android:text="@string/recycle"
-        android:textColor="@color/colorDarkGreen"
-        android:textFontWeight="@android:integer/config_longAnimTime"
-        android:textSize="36sp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg2"
+        android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+
+            android:id="@+id/foodname1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Kacchi"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/peep1"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+
+            android:id="@+id/peep1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="For 100 peeople"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/loc11"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodname1" />
+        <TextView
+
+            android:id="@+id/loc11"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Dhanmondi 5/A"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/peep1" />
+
+        <ImageView
+            android:id="@+id/foodimg1"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+          android:src="@drawable/food"
+            android:textColor="@color/colorWhiteAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/foodname1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/call1"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg2"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/call">
+
+        <TextView
+
+            android:id="@+id/foodname2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Kacchi"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/peep2"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:id="@+id/peep2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="For 100 peeople"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/loc2"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodname2" />
+
+        <TextView
+
+            android:id="@+id/loc2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Dhanmondi 5/A"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/peep2" />
+
+        <ImageView
+            android:id="@+id/foodimg2"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/food"
+            android:textColor="@color/colorWhiteAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/foodname2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/call2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg2"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/call1">
+
+        <TextView
+
+            android:id="@+id/foodname3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Kacchi"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/peep3"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+
+            android:id="@+id/peep3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="For 100 peeople"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/loc3"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodname3" />
+        <TextView
+
+            android:id="@+id/loc3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Dhanmondi 5/A"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/peep3" />
+
+        <ImageView
+            android:id="@+id/foodimg3"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/food"
+            android:textColor="@color/colorWhiteAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/foodname3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/call3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg2"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/call2">
+
+        <TextView
+
+            android:id="@+id/foodname4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Kacchi"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/peep4"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+
+            android:id="@+id/peep4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="For 100 peeople"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/loc4"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodname4" />
+        <TextView
+
+            android:id="@+id/loc4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Dhanmondi 5/A"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/peep4" />
+
+        <ImageView
+            android:id="@+id/foodimg4"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/food"
+            android:textColor="@color/colorWhiteAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/foodname4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/call4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg2"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/call3">
+
+        <TextView
+
+            android:id="@+id/foodname5"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Kacchi"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/peep5"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+
+            android:id="@+id/peep5"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="For 100 peeople"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/loc5"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodname5" />
+        <TextView
+
+            android:id="@+id/loc5"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Dhanmondi 5/A"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/peep5" />
+
+        <ImageView
+            android:id="@+id/foodimg5"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/food"
+            android:textColor="@color/colorWhiteAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/foodname5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/call5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg2"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/call4">
+
+        <TextView
+
+            android:id="@+id/foodname6"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Kacchi"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/peep6"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+
+            android:id="@+id/peep6"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="For 100 peeople"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/loc6"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodname6" />
+        <TextView
+
+            android:id="@+id/loc6"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Dhanmondi 5/A"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/foodimg6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/peep6" />
+
+        <ImageView
+            android:id="@+id/foodimg6"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/food"
+            android:textColor="@color/colorWhiteAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/foodname6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</com.amar.library.ui.StickyScrollView>
