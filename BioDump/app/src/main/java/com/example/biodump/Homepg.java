@@ -54,6 +54,21 @@ public class Homepg extends AppCompatActivity {
         //Progress Bar
 
         progress_bar=findViewById(R.id.progress_bar);
+        final Handler handler =new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(i<=50)
+                {
+                    progress_bar.setProgress(i);
+                    i++;
+                    handler.postDelayed(this,30);
+                }
+                else{
+                    handler.removeCallbacks(this);
+                }
+            }
+        },30);
 
 
 
