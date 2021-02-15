@@ -2,8 +2,12 @@
 <resources>
     <string-array name="city">
         <item>Dhaka</item>
+        <item>Gazipur</item>
+        <item>Mymensingh</item>
         <item>Chittagong</item>
-        <item>Sylhet</item>
+        <item>Shunamganj</item>
+        <item>Srimongol</item>
+        <item>Hobigonj</item>
     </string-array>
 
 </resources>

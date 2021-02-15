@@ -257,25 +257,31 @@
 
 
             <TextView
-                android:id="@+id/txt4"
+                android:id="@+id/txt1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="11dp"
-                android:text="City"
-                android:shadowColor="#FFFFFF"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:fontFamily="@font/segoe"/>
+                android:text="State"
+                android:textSize="14sp" />
 
             <Spinner
                 android:id="@+id/Statee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:entries="@array/city"
-                android:outlineAmbientShadowColor="@color/colorWhiteAccent"
-                android:fontFamily="@font/segoe" />
+                android:entries="@array/state" />
+
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="City" />
+
+            <Spinner
+                android:id="@+id/Citys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
 
             <Button
                 android:id="@+id/Signup"
