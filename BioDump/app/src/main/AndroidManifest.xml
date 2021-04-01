@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".FoodAds"></activity>
+        <activity android:name=".Food_ads"></activity>
+        <activity android:name=".addfood" />
+        <activity android:name=".Food" />
+        <activity android:name=".FoodAds" />
         <activity android:name=".CityRegistration" />
         <activity android:name=".CityLoginphone" />
         <activity android:name=".CityLogin" />
