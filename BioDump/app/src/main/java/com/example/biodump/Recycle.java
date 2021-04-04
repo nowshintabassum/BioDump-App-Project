@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Recycle extends AppCompatActivity {
 
@@ -15,6 +17,11 @@ public class Recycle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle);
+
+
+
+
+
 
         //initialize and assign variable for the bottom nav
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -38,7 +45,7 @@ public class Recycle extends AppCompatActivity {
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()
-                                ,MainActivity.class));
+                                ,Homepg.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.recycle:
@@ -47,5 +54,11 @@ public class Recycle extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(),Citizenlogin.class));
+
     }
 }

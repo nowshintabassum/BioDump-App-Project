@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "141221862274",
+    "firebase_url": "https://biodump-835ee-default-rtdb.firebaseio.com",
+    "project_id": "biodump-835ee",
+    "storage_bucket": "biodump-835ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141221862274:android:8227f7f18c25f1e2bb8d9b",
+        "android_client_info": {
+          "package_name": "com.example.biodump"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141221862274-ukf3rpneno2m3mb35lp7a4i5t41povk6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.biodump",
+            "certificate_hash": "2310fa209d229231ce72a5553ec211c0f7023e0d"
+          }
+        },
+        {
+          "client_id": "141221862274-abi1gv9mkabn4vnr3fepog5luhnc0ike.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQPkbXydgikev8_LRElWizd5QpfA3TKpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141221862274-abi1gv9mkabn4vnr3fepog5luhnc0ike.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

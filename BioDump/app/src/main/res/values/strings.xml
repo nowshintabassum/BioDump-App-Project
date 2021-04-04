@@ -14,5 +14,12 @@
     <string name="_180">180</string>
     <string name="temperature">Temperature</string>
     <string name="_35c">35C</string>
+    <string name="uk_aqi">UK AQI</string>
+    <string name="food">Food</string>
+    <string name="trees">Trees</string>
+    <string name="groceries">Groceries</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="object_in_the_picture">Object in the picture</string>
+    <string name="alternative">Alternative</string>
 
 </resources>
