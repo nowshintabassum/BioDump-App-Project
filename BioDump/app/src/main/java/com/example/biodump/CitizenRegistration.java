@@ -89,7 +89,8 @@ public class CitizenRegistration extends AppCompatActivity {
 
                         }
                         else {
-                            Toast.makeText(CitizenRegistration.this,"Error Occurred"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+
+                            Toast.makeText(CitizenRegistration.this,"Error Occurred "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

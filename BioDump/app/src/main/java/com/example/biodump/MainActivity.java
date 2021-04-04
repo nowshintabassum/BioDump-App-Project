@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.this, MainMenu.class);
+
+          
+
                 startActivity(intent);
             }
         }, 2500);

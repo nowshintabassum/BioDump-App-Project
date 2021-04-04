@@ -1,33 +1,336 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.amar.library.ui.StickyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".tree"
-    android:background="@drawable/bg3">
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    app:stickyFooter="@id/bottom_navigation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:itemBackground="@color/colorBlueAsh"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/menu_navigation"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_height="match_parent"
+        tools:context=".tree"
+        android:background="@drawable/bg3">
 
-    <TextView
-        android:id="@+id/tree"
-        android:layout_width="99dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="232dp"
-        android:text="@string/tree"
-        android:textColor="@color/colorDarkGreen"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!--  <ListView
+              android:id="@+id/listview"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="20dp"
+              android:layout_marginBottom="20dp"
+              app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/spinner" />-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="66dp"
+            android:background="@drawable/style_spinner"
+            android:scrollbarSize="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg2"
+            android:padding="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner">
+
+            <TextView
+
+                android:id="@+id/corpname"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="DHAKA NORTH CITY CORPORATION"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/callbtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/callbtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/btndarkgreen"
+                android:drawableStart="@drawable/phonewhite"
+                android:padding="10dp"
+                android:text="Call"
+                android:textColor="@color/colorWhiteAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/corpname"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!--  <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recyclerview"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="20dp"
+              android:layout_marginBottom="20dp"
+              app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/spinner" />-->
+        <TextView
+            android:id="@+id/tv11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10sp"
+            android:text="THE 5 R'S: REFUSE, REDUCE, REUSE REPURPOSE, RECYCLE"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/rfive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/call" />
+
+        <ImageView
+            android:id="@+id/rfive"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/rfive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv11" />
+
+        <TextView
+            android:id="@+id/tv12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Applying the 5 R's to your business' waste management and recycling strategies can positively impact the outcome of your program by significantly reducing the amount of waste your business generates. In the 5 R's hierarchy, remember to treat recycling as a last resort after attempting to refuse, reduce, reuse, or repurpose. Before disposing of your waste, walk through each of these steps in the following order:"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rfive" />
+
+        <ImageView
+            android:id="@+id/ivrefuse"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/refuse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv12" />
+
+        <TextView
+            android:id="@+id/tv13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Step One:Refuse"
+            android:textColor="@color/colorDarkGreen"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivrefuse" />
+
+        <TextView
+            android:id="@+id/tv14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="5dp"
+            android:text=" Talk to your procurement team about refusing to buy wasteful or non-recyclable products. When working with vendors, refuse unnecessary product packaging and request reusable or returnable containers"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhiteAccent"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv13" />
+
+        <ImageView
+            android:id="@+id/ivreduce"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/reduce"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv14" />
+
+        <TextView
+            android:id="@+id/tv15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Step Two:Reduce"
+            android:textColor="@color/colorDarkGreen"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivreduce" />
+
+        <TextView
+            android:id="@+id/tv16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="6dp"
+            android:text="Reduce the use of harmful, wasteful, and non-recyclable products.when printing a document, print double-sided to cut your waste output in half. Other commonly used items businesses can focus on reducing include single-use plastics."
+            android:textAlignment="center"
+            android:textColor="@color/colorWhiteAccent"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv15" />
+
+        <ImageView
+            android:id="@+id/ivreuse"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/reuse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv16" />
+
+        <TextView
+            android:id="@+id/tv17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Step Three:Reuse"
+            android:textColor="@color/colorDarkGreen"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivreuse" />
+
+        <TextView
+            android:id="@+id/tv18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="In an effort to reduce waste, reuse items throughout the workplace instead of buying new ones. Begin by focusing on one area of your business at a time, like the break room. Replace all of the single-use eating utensils, Styrofoam cups, water bottles, and paper plates with compostable or reusable alternatives."
+            android:textAlignment="center"
+            android:textColor="@color/colorWhiteAccent"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv17" />
+
+        <ImageView
+            android:id="@+id/ivrepurpose"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/repurpose"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv18" />
+
+        <TextView
+            android:id="@+id/tv19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Step Four:Repurpose"
+            android:textColor="@color/colorDarkGreen"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivrepurpose" />
+
+        <TextView
+            android:id="@+id/tv20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="5dp"
+            android:text="Try using wasted printer paper for scrap paper, cardboard boxes for storing supplies, binder clips to hold power cords and chargers in place, and even mason jars, coffee mugs, and tin cans for holding pens and pencils. Designate an area of your office as an Upcycle Station for collecting and storing supplies. Encourage your colleagues to add items to the station they no longer need and to check there before purchasing new supplies."
+            android:textAlignment="center"
+            android:textColor="@color/colorWhiteAccent"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv19" />
+
+        <ImageView
+            android:id="@+id/ivrecycle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/recycle1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv20" />
+
+        <TextView
+            android:id="@+id/tv21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Step Five:Recycle"
+            android:textColor="@color/colorDarkGreen"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivrecycle" />
+
+        <TextView
+            android:id="@+id/tv22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="5dp"
+            android:text="Last but definitely not least: recycle.Start collecting cardboard, mixed paper products, commingled materials (plastics, aluminum, glass) and organics."
+            android:textAlignment="center"
+            android:textColor="@color/colorWhiteAccent"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv21" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:itemBackground="@color/colorBlueAsh"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv22"
+            app:menu="@menu/menu_navigation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.amar.library.ui.StickyScrollView>
