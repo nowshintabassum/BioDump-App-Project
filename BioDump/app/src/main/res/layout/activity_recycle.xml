@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.amar.library.ui.StickyScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<!--<com.amar.library.ui.StickyScrollView
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="true"
     android:background="@drawable/bg3"
-    app:stickyFooter="@id/bottom_navigation">
+
+   >-->
 
 <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Recycle"
     android:background="@drawable/bg3">
 
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btndarkgreen"
+        android:foreground="@drawable/ic_add"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         app:itemBackground="@color/colorBlueAsh"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/call5"
+
         app:menu="@menu/menu_navigation"
         tools:layout_editor_absoluteX="0dp" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+ <!--   <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/call"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -331,7 +346,7 @@
             app:layout_constraintStart_toEndOf="@id/foodname5"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/call5"
@@ -342,7 +357,7 @@
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/call4">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
 
@@ -396,4 +411,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</com.amar.library.ui.StickyScrollView>

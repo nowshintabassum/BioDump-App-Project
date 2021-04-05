@@ -32,20 +32,49 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/Name"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Firstname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:textColorHint="#FFFFFFFF"
-                android:hint="Name"
+                app:hintTextColor="#FFFFFF">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="FirstName"
+                    android:inputType="text"
+                    android:shadowColor="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:fontFamily="@font/segoe"/>
 
-                />
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Lastname"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/colorWhiteAccent"
+                app:hintTextColor="@color/colorWhiteAccent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe"
+                    android:hint="last name"
+                    android:inputType="text"
+                    android:shadowColor="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Email"
                 android:layout_width="match_parent"
                 android:shadowColor="#FFFFFF"
@@ -54,14 +83,23 @@
                 android:textColorLink="#FFFFFF"
                 android:fontFamily="@font/segoe"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="11dp"
-                android:drawableStart="@drawable/whitemail"
-                android:hint="Email"
+                android:layout_marginTop="11dp">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/whitemail"
+                    android:drawablePadding="10dp"
+                    android:shadowColor="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:fontFamily="@font/segoe"
+                    android:hint="Email id"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                />
-
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Pwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,21 +109,33 @@
                 android:textColorLink="#FFFFFF"
                 android:fontFamily="@font/segoe"
                 android:layout_marginTop="11dp"
-                app:passwordToggleEnabled="true"
-                android:hint="Password"
+                app:passwordToggleEnabled="true">
 
-                />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:shadowColor="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:fontFamily="@font/segoe"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Cpass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="11dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="12dp"
+                android:shadowColor="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:fontFamily="@font/segoe"
+                app:passwordToggleEnabled="true">
 
-
-                <EditText
-                    android:id="@+id/Mobileno"
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:shadowColor="#FFFFFF"
@@ -93,11 +143,49 @@
                     android:textColorHint="#FFFFFF"
                     android:textColorLink="#FFFFFF"
                     android:fontFamily="@font/segoe"
-                    android:hint="Phone Number"/>
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/CountryCode"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    app:ccp_contentColor="@color/colorWhiteAccent"
+                    android:fontFamily="@font/segoe">
+
+                </com.hbb20.CountryCodePicker>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Mobileno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:fontFamily="@font/segoe">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mobile Number"
+                        android:inputType="number"
+                        android:shadowColor="#FFFFFF"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF"
+                        android:textColorLink="#FFFFFF"
+                        android:fontFamily="@font/segoe"/>
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/houseNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,12 +194,21 @@
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF"
                 android:textColorLink="#FFFFFF"
-                android:fontFamily="@font/segoe"
-                android:hint="Address"
+                android:fontFamily="@font/segoe">
 
-                />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="House/Street no"
+                    android:inputType="text"
+                    android:shadowColor="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:fontFamily="@font/segoe"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Area"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -120,8 +217,72 @@
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF"
                 android:textColorLink="#FFFFFF"
-                android:fontFamily="@font/segoe"
-                android:hint="Area"/>
+                android:fontFamily="@font/segoe">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Area"
+                    android:inputType="textMultiLine"
+                    android:shadowColor="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:fontFamily="@font/segoe"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:shadowColor="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:fontFamily="@font/segoe">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pin Code"
+                    android:inputType="number"
+                    android:shadowColor="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:fontFamily="@font/segoe"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/Statee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:entries="@array/state" />
+
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="City" />
+
+            <Spinner
+                android:id="@+id/Citys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+
             <Button
                 android:id="@+id/Signup"
                 android:layout_width="match_parent"
@@ -186,7 +347,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/emailbtn"
+                    android:id="@+id/email"
                     android:layout_width="95dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
@@ -199,7 +360,7 @@
                     android:fontFamily="@font/segoe"/>
 
                 <Button
-                    android:id="@+id/phonebtn"
+                    android:id="@+id/phone"
                     android:layout_width="97dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="30dp"

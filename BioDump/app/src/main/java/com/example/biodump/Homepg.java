@@ -79,7 +79,7 @@ public class Homepg extends AppCompatActivity {
         food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Homepg.this, Food.class);
+                Intent intent = new Intent(Homepg.this, Recycle.class);
                 startActivity(intent);
             }
         });
