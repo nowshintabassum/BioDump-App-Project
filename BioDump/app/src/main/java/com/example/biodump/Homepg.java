@@ -58,6 +58,49 @@ public class Homepg extends AppCompatActivity {
         //Progress Bar
 
         progress_bar=findViewById(R.id.progress_bar);
+        final Handler handler =new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(i<=50)
+                {
+                    progress_bar.setProgress(i);
+                    i++;
+                    handler.postDelayed(this,30);
+                }
+                else{
+                    handler.removeCallbacks(this);
+                }
+            }
+        },30);
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepg.this, Recycle.class);
+                startActivity(intent);
+            }
+        });
+        tree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepg.this, Recycle.class);
+                startActivity(intent);
+            }
+        });
+        groc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepg.this, Recycle.class);
+                startActivity(intent);
+            }
+        });
+        veg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepg.this, Recycle.class);
+                startActivity(intent);
+            }
+        });
 
 
 
